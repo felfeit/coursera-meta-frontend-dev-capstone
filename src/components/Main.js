@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import HomePage from './HomePage';
-import BookingPage from './BookingPage';
-import ConfirmedBooking from './ConfirmedBooking';
+import HomePage from '../pages/HomePage';
+import BookingPage from '../pages/BookingPage';
+import ConfirmedBooking from '../pages/ConfirmedBooking';
 
 /**
  * Fetches the available times for today's date upon initial load.
@@ -10,7 +10,8 @@ import ConfirmedBooking from './ConfirmedBooking';
  */
 export const initializeTimes = () => {
     const today = new Date();
-    return window.fetchAPI ? window.fetchAPI(today) : [];
+    const times = window.fetchAPI ? window.fetchAPI(today) : [];
+    return times.length ? times : ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 };
 
 /**
@@ -20,7 +21,8 @@ export const updateTimes = (state, action) => {
     switch (action.type) {
         case 'UPDATE_TIMES':
             const date = new Date(action.date);
-            return window.fetchAPI ? window.fetchAPI(date) : [];
+            const times = window.fetchAPI ? window.fetchAPI(date) : [];
+            return times.length ? times : ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
         default:
             return state;
     }
