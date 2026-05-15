@@ -1,13 +1,63 @@
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-orange: #EE9972;
+  --secondary-light-orange: #FBDABB;
+  --highlight-light: #EDEFEE;
+  --highlight-dark: #333333;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Markazi Text', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  color: var(--highlight-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif;
+  color: var(--primary-green);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+p {
+  font-family: 'Karla', sans-serif;
+  color: var(--highlight-dark);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+span {
+  font-family: 'Karla', sans-serif;
+}
+
+nav {
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li, a, button {
+  font-family: 'Karla', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
